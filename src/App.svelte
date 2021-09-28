@@ -53,7 +53,7 @@ const manejador = (e)=>{
 <main>
 
 {#await promise}
-	 <h1>liadong</h1>
+	 <h4>Cargando...</h4>
 {:then users} 
 	
 	
@@ -77,9 +77,10 @@ const manejador = (e)=>{
 
 				  <td>Precio por unidad MXN</td>
 
-				  <td>Total MXN</td>
+				  <td>Precio API MXN</td>
 
-				  <td>Actualizar</td>
+					<td>Precio Actualizado MXN</td>
+
 
 			  
 				</tr>
@@ -92,10 +93,10 @@ const manejador = (e)=>{
 				 
 				  <td>{item.name}</td>
 
-				
-				  <td><input type="text" id="cantidad" name="ncantidad" bind:value="{item.number_of_units}"></td>
-				
 
+				<!-- <td><input type="text" id="cantidad" name="ncantidad" bind:value="{item.number_of_units}"></td>-->
+
+					<td>{item.number_of_units}</td>
 				  {#each item[4],[item.prices] as item1}
 				  	
 				  		<td>{item1[0].per_unit}</td>
